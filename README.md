@@ -47,6 +47,14 @@ If you wish to use a template for the config you can do this:
 caddy_config: "{{ lookup('template', 'templates/Caddyfile.j2') }}"
 ```
 
+### Whether to template the Caddyfile on each run
+
+By default the Caddyfile is templated on each run. By setting this variable you can ensure the file is created on the first run but never updated after.
+
+```yaml
+caddy_config_update: true
+```
+
 ### The OS to download caddy for
 
 default:
